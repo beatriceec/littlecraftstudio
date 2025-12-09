@@ -1,12 +1,11 @@
 const path = require("path");
 // require("dotenv").config({ silent: true });
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 
-// Connect to MongoDB using Mongoose
+// connect to MongoDB using Mongoose
 const uri = process.env.MONGO_CONNECTION_STRING;
 mongoose.connect(uri).catch(() => {});
 
