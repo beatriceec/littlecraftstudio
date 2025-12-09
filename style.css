@@ -1,0 +1,276 @@
+body.index-page {
+    background-image: url('open postcard.png');
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: 65%;
+    height: 90vh; 
+    display: flex;
+}
+
+
+/* remove background for all other pages */
+body.artworks-page, body.projects-page {
+    background: none;
+}
+
+h1{ 
+    text-align: center;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+p {
+    display: flex;
+    font-family: "Borel", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    width: 600px;
+    height: 200px;
+    margin: 0 auto; 
+    border: 1px solid transparent;
+}
+
+
+
+
+nav {
+    padding: 1rem; /* Adds spacing inside the navbar */
+    margin: 0px;
+    padding: 20px;
+    position: absolute; /* Positions the navbar on top of the page */
+    top: 0; /* Aligns the navbar to the top of the page */
+    left: 0; /* Aligns the navbar to the left of the page */
+    width: 95%; /* Makes the navbar span the full width of the page */
+    z-index: 1;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+    gap: 1.5rem;
+}
+
+
+.home-icon {
+    width: 50px; 
+    height: auto;
+    object-fit: contain; 
+    margin-right: 10px;
+}
+
+
+.navbar li a {
+    color: black;
+    text-decoration: none; 
+    font-family: "Borel", cursive;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.navbar li a:hover {
+    text-decoration: underline;
+}
+
+/* Style the form container */
+form {
+    max-width: 600px; 
+    margin: 50px auto;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Style the form labels */
+form label {
+    display: block; 
+    font-family: "Borel", cursive;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333; /* Darker text color */
+}
+
+form input {
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Style the input fields and textarea */
+/* Style the input fields and textarea */
+form input[type="text"],
+form textarea,
+form select {
+    font-family: "Onest", sans-serif; /* Apply the Onest font */
+    font-optical-sizing: auto; /* Enable optical sizing */
+    font-weight: 400; /* Set font weight */
+    font-style: normal; /* Set font style */
+    width: 100%; /* Make inputs take up the full width */
+    padding: 10px; /* Add padding inside the inputs */
+    margin-bottom: 10px; /* Add spacing below each input */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 5px; /* Round the corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Style the textarea */
+form textarea {
+    resize: vertical; /* allows vertical resizing */
+    height: 80px; 
+}
+
+/* Style the dropdown (select) */
+form select {
+    background-color: #fff; 
+    cursor: pointer; 
+}
+
+/* Style the submit button */
+form button, button {
+    display: block; 
+    width: 100%; 
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #BDC1CF; 
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    font-family: "Borel", cursive;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect for the button */
+form button:hover {
+    background-color: #d2d7e7;
+    color: white;
+}
+
+.artworks-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; 
+    padding: 20px; 
+    justify-content: center;
+}
+
+.artwork {
+    text-align: center; 
+    font-family: "Borel", cursive;
+    font-weight: 300;
+}
+
+.artwork img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the projects container */
+.projects-container {
+    max-width: 600px; /* Limit the width of the container */
+    margin: 50px auto; /* Center the container on the page */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 10px; /* Round the corners */
+    background-color: #f9f9f9; /* Light background for the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style each project */
+.project {
+    margin-bottom: 20px; /* Add spacing between projects */
+    font-family: "Borel", cursive; /* Use the same font as addProject */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Style the project headings */
+.project h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Darker text color */
+}
+
+
+/* Style the project links */
+.project a {
+    color: #007BFF; /* Blue link color */
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Enable text wrapping */
+.project, .artwork, .projects-container {
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; /* Ensure long words wrap to the next line */
+    white-space: normal; /* Allow text to wrap normally */
+}
+
+/* Style the table */
+.items-table {
+    width: 100%; /* Make the table take up the full width of the container */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin: 20px 0; /* Add spacing above and below the table */
+    font-family: "Borel", cursive; /* Use the same font as the rest of the page */
+    font-size: 1rem;
+    border-radius: 10px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto; /* Center the table horizontally */
+
+}
+
+/* Style the table headers */
+.items-table th {
+    background-color: #f4f4f4; /* Light gray background for headers */
+    color: #333; /* Dark text color */
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Add padding inside the header cells */
+    border-bottom: 2px solid #ccc; /* Add a border below the headers */
+}
+
+/* Style the table rows */
+.items-table td {
+    padding: 10px; /* Add padding inside the data cells */
+    border-bottom: 1px solid #ddd; /* Add a border below each row */
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: wrap; /* Ensure long words wrap to the next line */
+    white-space: normal; /* Allow text to wrap normally */
+
+}
+
+/* Add hover effect for rows */
+.items-table tr:hover {
+    background-color: #f9f9f9; /* Light gray background on hover */
+}
+
+/* Style the links */
+.items-table a {
+    color: #007BFF; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.items-table a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+td {
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

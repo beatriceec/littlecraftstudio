@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>little craft studio</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="search-page">
+    <%- include('navbar') %>
+
+    <h1>search by medium</h1>
+    <form action="/search" method="POST">
+        <label for="medium">type 'all' to see entire catalog </label>
+        <br>
+        <input type="text" name="medium" placeholder="medium" required>
+        <button type="submit">search</button>
+    </form>
+
+    <table class="items-table">
+        <colgroup>
+            <col style="width: 60%;"> <!-- Title column -->
+            <col style="width: 25%;"> <!-- Medium column -->
+            <col style="width: 25%;"> <!-- Link column -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>medium</th>
+                <th>link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% items.forEach((item) => { %>
+                <tr>
+                    <td><%= item.title %></td>
+                    <td><%= item.medium %></td>
+                    <td><a href="<%= item.link %>" target="_blank"><%= item.link %></a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    </div>
+    </div>
+</body>
+</html>
