@@ -1,5 +1,5 @@
 const path = require("path");
-require("dotenv").config({ silent: true });
+// require("dotenv").config({ silent: true });
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const express = require("express");
