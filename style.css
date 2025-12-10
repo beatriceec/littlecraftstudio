@@ -2,7 +2,7 @@ body.index-page {
     background-image: url('open postcard.png');
     background-position: center center; 
     background-repeat: no-repeat; 
-    background-size: 55%;
+    background-size: 45%;
     height: 90vh; 
     display: flex;
 }
